@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  --main-text-color: #0d3451;
+  --main-background-color: #d7c870;
+  --hidden-text-color: #d7c870;
+  --star-color: #d7c870;
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  margin: 0;
+  color: var(--main-text-color);
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  background-color: var(--main-background-color);
+}
+
+.title {
+  font-weight: 800;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.phrase {
+  font-weight: 800;
+  font-size: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  
+  color: var(--hidden-text-color);
+}
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.stars-container::before,
+.stars-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 5% 10%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 15% 20%, var(--star-color), transparent),
+    radial-gradient(3px 3px at 25% 30%, var(--star-color), transparent),
+    radial-gradient(4px 4px at 35% 40%, var(--star-color), transparent),
+    radial-gradient(5px 5px at 45% 50%, var(--star-color), transparent),
+    radial-gradient(6px 6px at 55% 60%, var(--star-color), transparent),
+    radial-gradient(7px 7px at 65% 70%, var(--star-color), transparent),
+    radial-gradient(8px 8px at 75% 80%, var(--star-color), transparent),
+    radial-gradient(9px 9px at 85% 90%, var(--star-color), transparent),
+    radial-gradient(10px 10px at 95% 95%, var(--star-color), transparent);
+  background-repeat: no-repeat;
+}
+
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 27px;
+  height: 27px;
+  accent-color: #000;
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 0;
+}
+
+body:has(.theme-toggler__control:checked) {
+  --main-background-color: #0d3451;
+  --main-text-color: #d7c870;
+  --hidden-text-color: #d8c454;
+}
