@@ -48,23 +48,27 @@ body {
   overflow: hidden;
 }
 
-.stars-container::before,
 .stars-container::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(1px 1px at 5% 10%, var(--star-color), transparent),
-    radial-gradient(2px 2px at 15% 20%, var(--star-color), transparent),
-    radial-gradient(3px 3px at 25% 30%, var(--star-color), transparent),
-    radial-gradient(4px 4px at 35% 40%, var(--star-color), transparent),
-    radial-gradient(5px 5px at 45% 50%, var(--star-color), transparent),
-    radial-gradient(6px 6px at 55% 60%, var(--star-color), transparent),
-    radial-gradient(7px 7px at 65% 70%, var(--star-color), transparent),
-    radial-gradient(8px 8px at 75% 80%, var(--star-color), transparent),
-    radial-gradient(9px 9px at 85% 90%, var(--star-color), transparent),
-    radial-gradient(10px 10px at 95% 95%, var(--star-color), transparent);
+    radial-gradient(6px 6px at 5% 80%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 10% 5%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 70% 38%, var(--star-color), transparent),
+    radial-gradient(3px 3px at 55% 28%, var(--star-color), transparent),
+    radial-gradient(4px 4px at 32% 10%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 20% 42%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 45% 48%, var(--star-color), transparent),
+    radial-gradient(6px 6px at 72% 10%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 5% 62%, var(--star-color), transparent),
+    radial-gradient(8px 8px at 75% 40%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 72% 16%, var(--star-color), transparent),
+    radial-gradient(4px 4px at 73% 48%, var(--star-color), transparent),
+    radial-gradient(4px 4px at 50% 60%, var(--star-color), transparent),
+    radial-gradient(5px 5px at 97% 95%, var(--star-color), transparent),
+    radial-gradient(2px 2px at 98% 2%, var(--star-color), transparent);
   background-repeat: no-repeat;
 }
 
@@ -90,5 +94,5 @@ input[type="checkbox"]:focus-visible {
 body:has(.theme-toggler__control:checked) {
   --main-background-color: #0d3451;
   --main-text-color: #d7c870;
-  --hidden-text-color: #d8c454;
+  --hidden-text-color: #dac23f;
 }
